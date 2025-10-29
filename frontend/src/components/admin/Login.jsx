@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Admin.css';
+import './admin.css';
 
 const API_URL = 'http://localhost:5000/api';
 
