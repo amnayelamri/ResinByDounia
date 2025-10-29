@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+
 const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const path = require('path');
@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 const cors = require('cors');
 app.use(cors({
-  origin: ''
+  origin: 'https://resin-by-dounia-frontend.vercel.app'
 }));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
