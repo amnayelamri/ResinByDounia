@@ -29,7 +29,8 @@ router.get('/', async (req, res) => {
 router.post('/', auth, upload.array('images', 5), async (req, res) => {
   try {
     const { name, description } = req.body;
-    const images = req.files.map(file => `/uploads/creations/${file.filename}`);
+    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000';
+    const images = req.files.map(file => `${BACKEND_URL}/uploads/creations/${file.filename}`);
     
     const creation = new Creation({ name, description, images });
     await creation.save();
