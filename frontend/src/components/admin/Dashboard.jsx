@@ -4,7 +4,7 @@ import axios from 'axios';
 import ProductForm from './ProductForm';
 import CreationForm from './CreationForm';
 import TutorialForm from './TutorialForm';
-import './Admin.css';
+import './admin.css';
 
 const API_URL = 'http://localhost:5000/api';
 
