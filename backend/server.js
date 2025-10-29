@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://resin-by-dounia-frontend.vercel.app'
+  origin:'https://resin-by-dounia.vercel.app'
 }));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
