@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import PublicSite from './components/PublicSite/PublicSite.jsx';
-import Login from './components/Admin/Login.jsx';
-import Dashboard from './components/Admin/Dashboard.jsx';
+import Login from './components/admin/Login.jsx';
+import Dashboard from './components/admin/Dashboard.jsx';
 
 
 function App() {
