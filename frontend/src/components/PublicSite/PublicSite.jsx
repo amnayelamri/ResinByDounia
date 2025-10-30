@@ -3,6 +3,7 @@ import axios from 'axios';
 import './PublicSite.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const BASE_URL = API_URL.replace('/api', '');
 
 function PublicSite() {
   const [products, setProducts] = useState([]);
@@ -75,7 +76,7 @@ function PublicSite() {
             {creations.map((creation) => (
               <div key={creation._id} className="gallery-item">
                 {creation.images[0] && (
-                  <img src={`${API_URL}${creation.images[0]}`} alt={creation.name} />
+                  <img src={`${BASE_URL}${creation.images[0]}`} alt={creation.name} />
                 )}
                 <div className="gallery-item-info">
                   <h3>{creation.name}</h3>
@@ -93,7 +94,7 @@ function PublicSite() {
             {products.map((product) => (
               <div key={product._id} className="product">
                 {product.images[0] && (
-                  <img src={`${API_URL}${product.images[0]}`} alt={product.name} />
+                  <img src={`${BASE_URL}${product.images[0]}`} alt={product.name} />
                 )}
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
@@ -110,7 +111,7 @@ function PublicSite() {
             {tutorials.map((tutorial) => (
               <div key={tutorial._id} className="tutorial">
                 <video controls>
-                  <source src={`${API_URL}${tutorial.videoUrl}`} type="video/mp4" />
+                  <source src={`${BASE_URL}${tutorial.videoUrl}`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <h3>{tutorial.title}</h3>
