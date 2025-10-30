@@ -75,7 +75,7 @@ function PublicSite() {
             {creations.map((creation) => (
               <div key={creation._id} className="gallery-item">
                 {creation.images[0] && (
-                  <img src={`http://localhost:5000${creation.images[0]}`} alt={creation.name} />
+                  <img src={`${API_URL}${creation.images[0]}`} alt={creation.name} />
                 )}
                 <div className="gallery-item-info">
                   <h3>{creation.name}</h3>
@@ -93,7 +93,7 @@ function PublicSite() {
             {products.map((product) => (
               <div key={product._id} className="product">
                 {product.images[0] && (
-                  <img src={`http://localhost:5000${product.images[0]}`} alt={product.name} />
+                  <img src={`${API_URL}${product.images[0]}`} alt={product.name} />
                 )}
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
@@ -110,7 +110,7 @@ function PublicSite() {
             {tutorials.map((tutorial) => (
               <div key={tutorial._id} className="tutorial">
                 <video controls>
-                  <source src={`http://localhost:5000${tutorial.videoUrl}`} type="video/mp4" />
+                  <source src={`${API_URL}${tutorial.videoUrl}`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <h3>{tutorial.title}</h3>
