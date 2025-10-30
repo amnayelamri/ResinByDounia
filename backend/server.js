@@ -15,7 +15,7 @@ app.use(cors({
   origin: '*'
 }));
 app.use(express.json());
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static('/app/uploads'));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
